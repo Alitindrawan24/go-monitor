@@ -1,0 +1,7 @@
+{
+    "interval": 1,
+    "targets": [
+        "https://github.com"
+    ],
+    "notification_webhooks": []
+}

@@ -13,8 +13,12 @@ This application is designed to monitor the status of websites and send notifica
 
 ## Configuration
 The monitoring setup is specified in a JSON file named `setup.json` and can be copied from `setup-example.json`, which should be located in the same directory as the executable. The JSON file should have the following structure:
-- `interval`: Interval in minutes between each check.
-- `targets`: List of URLs to monitor.
+- `interval`: Interval in seconds between each check.
+- `timeout`: Timeout in seconds between each request to target url.
+- `targets`: List of target to monitor. Targets contain array of object like below
+    - `name`: The name of the target
+    - `url`: Url to monitor
+    - `timeout`: Timeout in seconds for request to this url. It will be replace the global timeout.
 - `notification_webhooks`: List of URLs for sending notifications.
 
 Ensure that the JSON file is properly formatted according to the specified structure.

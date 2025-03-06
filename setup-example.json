@@ -1,7 +1,11 @@
 {
-    "interval": 1,
+    "interval": 60,
+    "timeout": 30,
     "targets": [
-        "https://github.com"
+        {
+            "name": "Github",
+            "url": "https://github.com"
+        }
     ],
     "notification_webhooks": []
 }
